@@ -1,27 +1,10 @@
 # Qbo::Sandbox
 
-Copy QuickBooks Online production entities to a sandbox
+Copy QuickBooks Online production entities to a sandbox in a single command
 
 ## Requirements
 
 Ruby 2.2.2 or greater
-
-
-## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'qbo-sandbox'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install qbo-sandbox
 
 ## Usage
 
@@ -43,7 +26,7 @@ Or install it yourself as:
     ```
 4. `QBO_SANDBOX_ENV_FILE=~/qbo-sandbox.env qbo_sandbox customers`
 
-5. Important: Only tested with QuickBooks Online Name List resources Customer and Vendor.
+5. Important: Only tested with QuickBooks Online Name List Resources Customer and Vendor.
 
 ## Development
 
