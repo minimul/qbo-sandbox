@@ -1,0 +1,33 @@
+#!/usr/bin/env ruby
+
+require 'qbo-sandbox'
+require 'optparse'
+
+opt_parser = OptionParser.new do |opt|
+  opt.banner = "Usage: qbo-sandbox entity"
+  opt.separator  ""
+  opt.separator  "Options"
+
+  opt.on("-v", "--version", "print the version") do
+    $stdout.puts 'qbo-sandbox version ' + Qbo::Sandbox::VERSION
+    Kernel.exit
+  end
+end
+
+opt_parser.parse!
+
+unless ARGV.count == 1
+  $stdout.puts opt_parser
+  exit 1
+end
+
+begin
+  entity = ARGV.at(0)
+  preview = Qbo::Sandbox.new.send(entity)
+  $stdout.puts "Done"
+rescue => e
+  $stderr.puts e
+  exit 1
+end
+
+$stdout.flush

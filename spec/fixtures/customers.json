@@ -1,0 +1,90 @@
+{
+  "QueryResponse": {
+    "Customer": [
+      {
+        "Taxable": false,
+        "Job": false,
+        "BillWithParent": false,
+        "Balance": 0,
+        "BalanceWithJobs": 43000.0,
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "PreferredDeliveryMethod": "Print",
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "4795",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2013-09-03T13:18:24-07:00",
+          "LastUpdatedTime": "2016-10-03T12:54:13-07:00"
+        },
+        "GivenName": "Abilene",
+        "MiddleName": "High",
+        "FamilyName": "School Band",
+        "FullyQualifiedName": "Abilene High School",
+        "DisplayName": "Abilene High School",
+        "PrintOnCheckName": "Abilene High School",
+        "Active": true
+      },
+      {
+        "Taxable": true,
+        "Job": true,
+        "BillWithParent": true,
+        "ParentRef": {
+          "value": "4795"
+        },
+        "Level": 1,
+        "Balance": 43000.0,
+        "BalanceWithJobs": 43000.0,
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "PreferredDeliveryMethod": "Print",
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "6759",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2016-06-23T11:37:39-07:00",
+          "LastUpdatedTime": "2016-10-03T12:54:13-07:00"
+        },
+        "FullyQualifiedName": "Abilene High School:2017March Choir New Orleans",
+        "CompanyName": "2017March Choir New Orleans",
+        "DisplayName": "2017March Choir New Orleans",
+        "PrintOnCheckName": "2017March Choir New Orleans",
+        "Active": true
+      },
+      {
+        "Taxable": false,
+        "Job": false,
+        "BillWithParent": false,
+        "Balance": 0,
+        "BalanceWithJobs": 0,
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "PreferredDeliveryMethod": "Print",
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "4918",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2013-11-01T09:37:43-07:00",
+          "LastUpdatedTime": "2014-05-28T13:36:58-07:00"
+        },
+        "FullyQualifiedName": "Adena High School Band",
+        "CompanyName": "Adena High School Band",
+        "DisplayName": "Adena High School Band",
+        "PrintOnCheckName": "Adena High School Band",
+        "Active": true
+      }
+    ],
+    "startPosition": 1,
+    "maxResults": 3
+  },
+  "time": "2016-10-17T15:03:35.683-07:00"
+}

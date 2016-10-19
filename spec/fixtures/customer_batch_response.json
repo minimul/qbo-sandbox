@@ -1,0 +1,77 @@
+{
+  "BatchItemResponse": [
+    {
+      "Customer": {
+        "Taxable": false,
+        "Job": false,
+        "BillWithParent": false,
+        "Balance": 0,
+        "BalanceWithJobs": 0,
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "PreferredDeliveryMethod": "Print",
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "58",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2016-10-19T07:23:49-07:00",
+          "LastUpdatedTime": "2016-10-19T07:23:49-07:00"
+        },
+        "GivenName": "Abilene",
+        "MiddleName": "High",
+        "FamilyName": "School Band",
+        "FullyQualifiedName": "Abilene High School",
+        "DisplayName": "Abilene High School",
+        "PrintOnCheckName": "Abilene High School",
+        "Active": true
+      },
+      "bId": "bid4795"
+    },
+    {
+      "Fault": {
+        "Error": [
+          {
+            "Message": "Invalid Reference Id",
+            "Detail": "Invalid Reference Id : Something you're trying to use has been made inactive. Check the fields with accounts, customers, items, vendors or employees.",
+            "code": "2500",
+            "element": ""
+          }
+        ],
+        "type": "ValidationFault"
+      },
+      "bId": "bid6759"
+    },
+    {
+      "Customer": {
+        "Taxable": false,
+        "Job": false,
+        "BillWithParent": false,
+        "Balance": 0,
+        "BalanceWithJobs": 0,
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "PreferredDeliveryMethod": "Print",
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "59",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2016-10-19T07:23:49-07:00",
+          "LastUpdatedTime": "2016-10-19T07:23:49-07:00"
+        },
+        "FullyQualifiedName": "Adena High School Band",
+        "CompanyName": "Adena High School Band",
+        "DisplayName": "Adena High School Band",
+        "PrintOnCheckName": "Adena High School Band",
+        "Active": true
+      },
+      "bId": "bid4918"
+    }
+  ],
+  "time": "2016-10-19T07:23:49.621-07:00"
+}
