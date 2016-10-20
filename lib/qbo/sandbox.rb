@@ -21,18 +21,26 @@ module Qbo
       ENV.fetch(env_var) { |k| raise "Missing value for either ENV['#{k}'] or keyword argument #{key}" }
     end
 
-    def copy(entity, max: 1000, select: nil, inactive: false)
-      payload = { "BatchItemRequest" => [] }
+    def copy(entity, max: 1000, select: nil, inactive: false, batch_size: 30)
+      batch = []
       QboApi.production = true
-      #@prod.query(select)
       @prod.all(entity, max: max, select: select, inactive: inactive) do |e|
-        payload["BatchItemRequest"] << build_single_batch(e, entity)
+        batch << build_single_batch(e, entity)
       end
-      QboApi.production = false
-      @sandbox.batch payload
+      submit_batch(batch, batch_size)
     end
 
     private
+
+    def submit_batch(batch, batch_size)
+      QboApi.production = false
+      collect_responses = []
+      batch.each_slice(batch_size) do |b|
+        payload = { "BatchItemRequest" => b }
+        collect_responses << @sandbox.batch(payload)
+      end
+      collect_responses
+    end
 
     def keyword_args
       {

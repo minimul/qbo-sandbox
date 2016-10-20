@@ -1,0 +1,54 @@
+{
+  "BatchItemRequest": [
+    {
+      "bId": "bid44",
+      "operation": "create",
+      "Item": {
+        "Name": "Bounced Check Fee - Income",
+        "Active": true,
+        "FullyQualifiedName": "Bounced Check Fee - Income",
+        "Taxable": false,
+        "UnitPrice": 0,
+        "Type": "Service",
+        "IncomeAccountRef": {
+          "value": "160",
+          "name": "Returned Check Charges"
+        },
+        "PurchaseCost": 0,
+        "TrackQtyOnHand": false,
+        "domain": "QBO",
+        "sparse": false,
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2014-04-07T14:32:09-07:00",
+          "LastUpdatedTime": "2014-04-07T14:32:09-07:00"
+        }
+      }
+    },
+    {
+      "bId": "bid19",
+      "operation": "create",
+      "Item": {
+        "Name": "Deposits",
+        "Active": true,
+        "FullyQualifiedName": "Deposits",
+        "Taxable": false,
+        "UnitPrice": 0,
+        "Type": "Service",
+        "IncomeAccountRef": {
+          "value": "77",
+          "name": "Deposits"
+        },
+        "PurchaseCost": 0,
+        "TrackQtyOnHand": false,
+        "domain": "QBO",
+        "sparse": false,
+        "SyncToken": "3",
+        "MetaData": {
+          "CreateTime": "2013-04-29T14:08:08-07:00",
+          "LastUpdatedTime": "2013-07-10T11:46:09-07:00"
+        }
+      }
+    }
+  ]
+}

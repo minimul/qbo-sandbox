@@ -1,0 +1,19 @@
+{
+  "BatchItemResponse": [
+    {
+      "Fault": {
+        "Error": [
+          {
+            "Message": "Invalid Reference Id",
+            "Detail": "Invalid Reference Id : Something you're trying to use has been made inactive. Check the fields with accounts, customers, items, vendors or employees.",
+            "code": "2500",
+            "element": ""
+          }
+        ],
+        "type": "ValidationFault"
+      },
+      "bId": "bid46"
+    }
+  ],
+  "time": "2016-10-19T15:03:25.186-07:00"
+}

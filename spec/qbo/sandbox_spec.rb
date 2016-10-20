@@ -36,7 +36,7 @@ describe Qbo::Sandbox do
     qbo_sandbox = Qbo::Sandbox.new
     #QboApi.log = true
     resp = qbo_sandbox.copy :customers
-    expect(resp["BatchItemResponse"].size).to eq 3
+    expect(resp.first["BatchItemResponse"].size).to eq 3
   end
 
   it "copies QBO production vendors to the sandbox" do
@@ -45,6 +45,14 @@ describe Qbo::Sandbox do
     qbo_sandbox = Qbo::Sandbox.new
     #QboApi.log = true
     resp = qbo_sandbox.copy :vendors
-    expect(resp["BatchItemResponse"].size).to eq 3
+    expect(resp.first["BatchItemResponse"].size).to eq 3
+  end
+
+  it "copies QBO production items to the sandbox in batches of 2" do
+    WebMock.stub_request(:get, /.*query=SELECT.*Item.*/).to_return(body: fixture(:items))
+    WebMock.stub_request(:post, /^.*batch$/).to_return(body: fixture(:item_batch_response_1))
+    qbo_sandbox = Qbo::Sandbox.new
+    resp = qbo_sandbox.copy :items, batch_size: 2
+    expect(resp.size).to eq 2
   end
 end

@@ -1,7 +1,0 @@
-require 'JSON'
-
-json = "{\"BatchItemResponse\":[{\"Vendor\":{\"Balance\":0,\"Vendor1099\":false,\"CurrencyRef\":{\"value\":\"USD\",\"name\":\"United States Dollar\"},\"domain\":\"QBO\",\"sparse\":false,\"Id\":\"60\",\"SyncToken\":\"0\",\"MetaData\":{\"CreateTime\":\"2016-10-19T12:41:57-07:00\",\"LastUpdatedTime\":\"2016-10-19T12:41:57-07:00\"},\"DisplayName\":\"10 PIN BOWLING\",\"PrintOnCheckName\":\"10 PIN BOWLING\",\"Active\":true},\"bId\":\"bid3174\"},{\"Vendor\":{\"Balance\":0,\"Vendor1099\":false,\"CurrencyRef\":{\"value\":\"USD\",\"name\":\"United States Dollar\"},\"domain\":\"QBO\",\"sparse\":false,\"Id\":\"61\",\"SyncToken\":\"0\",\"MetaData\":{\"CreateTime\":\"2016-10-19T12:41:58-07:00\",\"LastUpdatedTime\":\"2016-10-19T12:41:58-07:00\"},\"DisplayName\":\"3% OPEN Savings\",\"PrintOnCheckName\":\"3% OPEN Savings\",\"Active\":true},\"bId\":\"bid3517\"},{\"Vendor\":{\"Balance\":0,\"Vendor1099\":false,\"CurrencyRef\":{\"value\":\"USD\",\"name\":\"United States Dollar\"},\"domain\":\"QBO\",\"sparse\":false,\"Id\":\"62\",\"SyncToken\":\"0\",\"MetaData\":{\"CreateTime\":\"2016-10-19T12:41:58-07:00\",\"LastUpdatedTime\":\"2016-10-19T12:41:58-07:00\"},\"DisplayName\":\"5% OPEN SAVINGS\",\"PrintOnCheckName\":\"5% OPEN SAVINGS\",\"Active\":true},\"bId\":\"bid3350\"}],\"time\":\"2016-10-19T12:41:57.735-07:00\"}"
-
-f = File.new("#{__dir__}/vendor_batch_response.json", 'w')
-f << JSON.pretty_generate(JSON.parse(json))
-f.close

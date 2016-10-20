@@ -22,7 +22,7 @@ end
 
 begin
   entity = ARGV.at(0)
-  preview = Qbo::Sandbox.new.send(entity)
+  preview = Qbo::Sandbox.new.copy(entity)
   $stdout.puts "Done"
 rescue => e
   $stderr.puts e
